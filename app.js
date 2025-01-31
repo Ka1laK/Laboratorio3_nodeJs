@@ -31,11 +31,20 @@ app.get('/elements', (req, res) => {
     })
   });
 
+  app.get('/salidas', (req, res) => {
+    res.render('salidas', {
+      nombre: 'Armando David Espinoza',
+      titulo: 'Curso de Node'
+    })
+  });
+
   app.get('*', (req, res)=> {
     res.sendFile(__dirname +'/public/404.html');
   })
 
-app.listen(port, () => {
+  app.listen(port, () => {
     console.log(`Example app listenining al http://localhost:${port}`)
 
-})
+  })
+
+
